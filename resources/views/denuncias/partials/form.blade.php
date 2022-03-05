@@ -1,78 +1,51 @@
 
-<div class="form-group">
-
+<div class="form-group m-3 p-5">
+   <h1 class=" negrita-h1">
+    Datos de la denuncia
+</h1>
     <div class="row">
         <div class="col-6">
-            {!! Form::label('name', 'Nombre') !!}
-            {!! Form::text('name',null,['class'=>'form-control' . ($errors->has('name') ? ' is-invalid':''),'placeholder'=>'Escriba el nombre del banner']) !!}
-           @error('name')
-              <span class="invalid-feedback">
-                <strong>
-                    {{$message}}
-                </strong>
-            </span> 
-           @enderror
 
-           {!! Form::label('date', '¿Cuándo ocurrió?') !!}
-           {!! Form::date('date',null,['class'=>'form-control' . ($errors->has('date') ? ' is-invalid':''),'placeholder'=>'Escriba el nombre del banner']) !!}
-          @error('date')
-             <span class="invalid-feedback">
-               <strong>
-                   {{$message}}
-               </strong>
-           </span> 
-          @enderror
-
-          {!! Form::label('place', '¿Dónde ocurrió?') !!}
-          {!! Form::text('place',null,['class'=>'form-control' . ($errors->has('place') ? ' is-invalid':''),'placeholder'=>'Escriba el nombre del banner']) !!}
-         @error('place')
-            <span class="invalid-feedback">
-              <strong>
-                  {{$message}}
-              </strong>
-          </span> 
-         @enderror
-
-         {!! Form::label('name-d', '¿Quién lo cometió?') !!}
-         {!! Form::text('name-d',null,['class'=>'form-control' . ($errors->has('name-d') ? ' is-invalid':''),'placeholder'=>'Escriba el nombre del banner']) !!}
-        @error('name-d')
-           <span class="invalid-feedback">
-             <strong>
-                 {{$message}}
-             </strong>
-         </span> 
-        @enderror
-
-
-
-        </div>
-        <div class="col-6">
-            <div class="form-group {{ $errors->has('imagen') ? 'has-error' : ''}}">
-                {!! Form::label('imagen', 'Evidencias', ['class' => 'control-label']) !!}
-        
-                    <div class="custom-upload-image">
-        
-                        <img id="custom-upload-image" class="img-fluid w-100 mb-3 border" 
-                        src="" alt="Tu imagen" />
-        
-                        <label class="panda-btn btn btn-outline-dark rounded-0 w-100 browse">
-                        Seleccionar<input id="browse" type="file" name="imagen" class="d-none">
-                        </label>        
-                    </div>
+            <div class="m-3">
+                {!! Form::label('name', 'Nombre del denunciante (opcional)') !!}
+                {!! Form::text('name',null,['class'=>'form-control' . ($errors->has('name') ? ' is-invalid':''),'placeholder'=>'Ingrese su respuesta']) !!}
+               @error('name')
+                  <span class="invalid-feedback">
+                    <strong>
+                        {{$message}}
+                    </strong>
+                </span> 
+               @enderror
             </div>
 
-            {!! Form::label('sex', '¿Podemos saber su sexo?') !!}
-            {!! Form::text('sex',null,['class'=>'form-control' . ($errors->has('sex') ? ' is-invalid':''),'placeholder'=>'Escriba el nombre del banner']) !!}
-           @error('sex')
-              <span class="invalid-feedback">
-                <strong>
-                    {{$message}}
-                </strong>
-            </span> 
-           @enderror
+            <div class="m-3">
+           {!! Form::label('sexo_id', '¿Podemos saber su sexo? (opcional)') !!}
+           <select name="sexo_id" class="form-control" >
+               <option value="sexo_id"> -- Seleccione estado --</option>
+               @foreach($sexos as $sexos)
+                   <option value="{{ $sexos->id }}">
+                       {{ $sexos->name }}
+                   </option>
+               @endforeach
+           </select>
+        </div>
 
-           {!! Form::label('age', '¿Podemos saber su edad?') !!}
-           {!! Form::text('age',null,['class'=>'form-control' . ($errors->has('age') ? ' is-invalid':''),'placeholder'=>'Escriba el nombre del banner']) !!}
+           <div class="m-3">
+           {!! Form::label('escolaridad_id', '¿Cuál es su escolaridad?(opcional)') !!}
+
+           <select name="escolaridad_id" class="form-control" >
+              <option value=""> -- Seleccione estado --</option>
+              @foreach($escolaridades as $escolaridad)
+                  <option value="{{ $escolaridad->id }}">
+                      {{ $escolaridad->name }}
+                  </option>
+              @endforeach
+          </select>
+</div>
+
+          <div class="m-3">
+           {!! Form::label('age', '¿Podemos saber su edad? (opcional)') !!}
+           {!! Form::number('age',null,['class'=>'form-control' . ($errors->has('age') ? ' is-invalid':''),'placeholder'=>'Ingrese su respuesta']) !!}
           @error('age')
              <span class="invalid-feedback">
                <strong>
@@ -80,9 +53,11 @@
                </strong>
            </span> 
           @enderror
+        </div>
 
-          {!! Form::label('occupation', '¿Cuál es su ocupación?') !!}
-          {!! Form::text('occupation',null,['class'=>'form-control' . ($errors->has('occupation') ? ' is-invalid':''),'placeholder'=>'Escriba el nombre del banner']) !!}
+          <div class="m-3">
+          {!! Form::label('occupation', '¿Cuál es su ocupación? (opcional)') !!}
+          {!! Form::text('occupation',null,['class'=>'form-control' . ($errors->has('occupation') ? ' is-invalid':''),'placeholder'=>'Ingrese su respuesta']) !!}
          @error('occupation')
             <span class="invalid-feedback">
               <strong>
@@ -91,6 +66,101 @@
           </span> 
          @enderror
         </div>
+
+
+
+
+
+         
+        </div>
+
+     
+
+
+
+        
+        <div class="col-6">
+
+            <div class="m-3">
+               {!! Form::label('date', '¿Cuándo ocurrió?') !!}
+               {!! Form::date('date',null,['class'=>'form-control' . ($errors->has('date') ? ' is-invalid':''),'placeholder'=>'Ingrese su respuesta']) !!}
+              @error('date')
+                 <span class="invalid-feedback">
+                   <strong>
+                       {{$message}}
+                   </strong>
+               </span> 
+              @enderror
+            </div>
+    
+            <div class="m-3">
+             {!! Form::label('estado_id', '¿Dónde ocurrió?') !!}
+    
+             <select name="estado_id" class="form-control" >
+                <option value=""> -- Seleccione estado --</option>
+                @foreach($estados as $estado)
+                    <option value="{{ $estado->id }}">
+                        {{ $estado->name }}
+                    </option>
+                @endforeach
+            </select>
+            </div>
+
+
+            <div class="m-3">
+            {!! Form::label('acto_id', '¿Qué acto de corrupción se cometió? (opcional)') !!}
+    
+            <select name="acto_id" class="form-control" >
+               <option value=""> -- Seleccione el acto de corrupción que se cometió --</option>
+               @foreach($actos as $acto)
+                   <option value="{{ $acto->id }}">
+                       {{ $acto->name }}
+                   </option>
+               @endforeach
+           </select>
+          </div>
+
+          <div class="m-3">
+             {!! Form::label('name-d', '¿Quién lo cometió? (opcional)') !!}
+             {!! Form::text('name-d',null,['class'=>'form-control' . ($errors->has('name-d') ? ' is-invalid':''),'placeholder'=>'Ingrese su respuesta']) !!}
+            @error('name-d')
+               <span class="invalid-feedback">
+                 <strong>
+                     {{$message}}
+                 </strong>
+             </span> 
+            @enderror
+        </div>
+
+
+        <div class="m-3">
+            {!! Form::label('description', '¿Qué y cómo sucedió?') !!}
+            {!! Form::text('description',null,['class'=>'form-control' . ($errors->has('suceso') ? ' is-invalid':''),'placeholder'=>'Ingrese su respuesta']) !!}
+           @error('description')
+              <span class="invalid-feedback">
+                <strong>
+                    {{$message}}
+                </strong>
+            </span> 
+           @enderror
+        </div>
+
+
+        <div class="m-3">
+            <div class="form-group {{ $errors->has('imagen') ? 'has-error' : ''}}">
+                {!! Form::label('imagen', 'Evidencias', ['class' => 'control-label']) !!}
+        
+                    <div class="custom-upload-image">
+        
+                        <label class="panda-btn btn btn-outline-dark rounded-0 w-100 browse">
+                        Seleccionar<input id="browse" type="file" name="imagen" class="d-none">
+                        </label>        
+                    </div>
+            </div>
+        </div>
+
+
+
     </div>
 
 
@@ -110,23 +180,3 @@
 </div>
 
 
-
-@push('js')
-  <script>
-      function readImage (input) {
-      if (input.files && input.files[0]) {
-      var reader = new FileReader();
-      reader.onload = function (e) {
-          $('#custom-upload-image').attr('src', e.target.result); // Renderizamos la imagen
-         console.log("fin");
-      }
-      reader.readAsDataURL(input.files[0]);
-      }
-  }
-
-  $("#browse").change(function () {
-      // Código a ejecutar cuando se detecta un cambio de archivO
-      readImage(this);
-  });
-  </script>    
-@endpush

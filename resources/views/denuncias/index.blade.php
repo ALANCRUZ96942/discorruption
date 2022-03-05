@@ -7,6 +7,8 @@
             <div class="row">
                 <div class="col-md-10 col-12">
                     {!! Form::open(['route' =>['denuncias.store'],'files'=> true]) !!}
+                    @csrf
+
                         @include('denuncias.partials.form')
 
                         {!! Form::submit('Crear denuncia', ['class'=>'btn btn-primary']) !!}
@@ -25,21 +27,6 @@
 
 @endsection
 
-@push('js')
-  <script>
-      function readImage (input) {
-      if (input.files && input.files[0]) {
-      var reader = new FileReader();
-      reader.onload = function (e) {
-          $('#custom-upload-image').attr('src', e.target.result); // Renderizamos la imagen
-      }
-      reader.readAsDataURL(input.files[0]);
-      }
-  }
-
-  $("#browse").change(function () {
-      // Código a ejecutar cuando se detecta un cambio de archivO
-      readImage(this);
-  });
-  </script>    
-@endpush
+@section('js')
+    <script> console.log('Hi!'); </script>
+@stop

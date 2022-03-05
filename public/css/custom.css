@@ -1,0 +1,41 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito);
+@font-face{
+    font-family: Montserrat;
+    font-display:auto;
+    src:url(../assets/fonts/Montserrat-VariableFont_wght.ttf) 
+    format("truetype")
+  }
+
+  .negrita-h1{
+    font-weight: bold;
+    color: #1a2d57;
+  }
+
+  .text-muted {
+    font-family: Montserrat;
+    font-size: 1.5rem;
+    --bs-text-opacity: 1;
+    color: #fff !important;
+    text-decoration: none;
+  } 
+
+  .contenedor{
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  .navb{
+    font-size: 1.1;
+    background-color: #6F83A8;
+  }
+  .fnd{
+    background-image: url("../assets/img/fndo.png");
+  }
+  @media (min-width: 768px) {
+    .botones{
+      position: absolute;
+      top: 20%;
+      right: 0%;
+    
+    }
+  

@@ -15,5 +15,10 @@ class Denuncia extends Model
         return $this->morphOne(Imagen::class,'imagenable');
     }
 
+    public function estados()
+    {
+      return $this->hasMany(Estado::class);
+    }
+
     
 }

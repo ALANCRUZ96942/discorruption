@@ -16,18 +16,34 @@ class CreateDenunciasTable extends Migration
         Schema::create('denuncias', function (Blueprint $table) {
             $table->id();
             $table->date('date');
-            $table->text('place');
             $table->text('description')->nullable();
+
 
             $table->string('name-d')->nullable();
             $table->text('occupation-d')->nullable();
+            $table->string('e-mail')->nullable();
 
-            $table->text('level-studies')->nullable();
+    
 
             $table->string('name')->nullable();
-            $table->char('sex');
             $table->integer('age');
             $table->text('occupation')->nullable();
+
+            $table->unsignedBigInteger('sexo_id')->nullable();
+            $table->foreign('sexo_id')->references('id')->on('sexos');
+
+            $table->unsignedBigInteger('acto_id')->nullable();
+            $table->foreign('acto_id')->references('id')->on('actos');
+
+
+            $table->unsignedBigInteger('estado_id')->nullable();
+            $table->foreign('estado_id')->references('id')->on('estados');
+
+            $table->unsignedBigInteger('escolaridad_id')->nullable();
+            $table->foreign('escolaridad_id')->references('id')->on('escolaridads');
+
+
+            $table->text('suceso')->nullable();
 
             $table->timestamps();
         });

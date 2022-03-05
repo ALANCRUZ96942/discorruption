@@ -12,17 +12,13 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
+    <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Nunito';
-            background: #f7fafc;
-        }
     </style>
 </head>
 <body>
     <div class="navb container-fluid m-0 p-0">
-        <div class="col-12 pt-4 mb-0 pb-0">
+        <div class="col-12 pt-4 pb-4 mb-0">
             <div class="row m-0 p-0">
                 <div class="col-md-2 col-12" style="text-align: center">
                     <img src="../assets/img/logo.png" class="img-fluid" alt="logo">
@@ -33,7 +29,7 @@
                             <a href="{{ route('login') }}" class=" text-muted">Créditos</a>
                         </div>
                         <div class="col" style="text-align: center">
-                            <a href="{{ route('login') }}" class=" text-muted">Esadísticas</a>
+                            <a href="{{ route('denuncias.index') }}" class=" text-muted">Esadísticas</a>
                         </div>
                         <div class="col" style="text-align: center">
                             <a href="{{ route('login') }}" class="  text-muted">¿Quiénes somos?</a>

@@ -12,7 +12,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
+    <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
     <style>
         body {
             font-family: 'Nunito';
@@ -49,7 +49,7 @@
                             <a href="{{ route('login') }}" class=" text-muted">Esadísticas</a>
                         </div>
                         <div class="col" style="text-align: center">
-                            <a href="{{ route('login') }}" class="  text-muted">¿Quiénes somos?</a>
+                            <a href="#quienes" class="  text-muted">¿Quiénes somos?</a>
                         </div>
                     
                     </div>
@@ -86,7 +86,7 @@
         <div class="col-md-4 col-12 mb-3 mt-3 p-md-0 p-3 botones">
             <div class="row m-0 mb-0 p-0">
                <button type="button" class="shadow btn btn-light" style="border-top-left-radius: 15px;border-bottom-left-radius: 15px">
-                <a href="{{route('denuncias.index')}}" style="text-decoration: none"><h1 class="p-lg-5 p-md-0 p-5 negrita-h1">Comienza tu denuncia aquí</h1>
+                <a href="{{route('denuncias.create')}}" style="text-decoration: none"><h1 class="p-lg-5 p-md-0 p-5 negrita-h1">Comienza tu denuncia aquí</h1>
                 </a></button>
             </div>
             <div class="row m-0 mt-5 p-0">
@@ -98,140 +98,25 @@
     </div>
 
     <div class="container-fluid fnd">
-        <div class="col">
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel laborum optio iste soluta beatae ratione quos dolores cupiditate placeat laudantium similique error delectus non asperiores qui cumque quae, alias quisquam?</h5>
+        <div class="container mt-5 mb-5">
+            <div class="card shadow-lg">
+                <div class="card-body">
+                <div class="row">
+                    <div class="col-md-12 col-12 p-5" name="quienes">
+                        <a name="quienes" id="quienes"></a> 
+
+                        <h1 style="text-align: center">
+                            ¿Quiénes somos?
+                        </h1>
+                        <h4 class="mt-4"style="text-align: justify; line-height: 25px">
+                            El objetivo de este proyecto es contribuir con las autoridades para evitar actos de corrupción. Somos una plataforma que funciona como medio para brindar información asociada al fenómeno de la corrupción, así como recibir denuncias y llevarlas con las autoridades correspondientes. No somos ni tenemos ninguna autoridad para investigar y castigar ninguna clase de conducta que aquí sea denunciada, las autoridades serán las encargadas de darle el seguimiento necesario. Siempre es mejor denunciar directamente en las fiscalías especializadas en delitos de corrupción federales o estatales, pero ofrecemos esta vía confiable, segura, ágil y sencilla para que realices una denuncia efectiva
+                        </h4>
+                    </div>
+                </div>
+                </div>
+            </div>
+    
         </div>
-        <div class="col">
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel laborum optio iste soluta beatae ratione quos dolores cupiditate placeat laudantium similique error delectus non asperiores qui cumque quae, alias quisquam?</h5>
-        </div>
-        <div class="col">
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel laborum optio iste soluta beatae ratione quos dolores cupiditate placeat laudantium similique error delectus non asperiores qui cumque quae, alias quisquam?</h5>
-        </div>
-        <div class="col">
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel laborum optio iste soluta beatae ratione quos dolores cupiditate placeat laudantium similique error delectus non asperiores qui cumque quae, alias quisquam?</h5>
-        </div>
-        <div class="col">
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel laborum optio iste soluta beatae ratione quos dolores cupiditate placeat laudantium similique error delectus non asperiores qui cumque quae, alias quisquam?</h5>
-        </div>
-        <div class="col">
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel laborum optio iste soluta beatae ratione quos dolores cupiditate placeat laudantium similique error delectus non asperiores qui cumque quae, alias quisquam?</h5>
-        </div>
-        <div class="col">
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel laborum optio iste soluta beatae ratione quos dolores cupiditate placeat laudantium similique error delectus non asperiores qui cumque quae, alias quisquam?</h5>
-        </div>
-        <div class="col">
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel laborum optio iste soluta beatae ratione quos dolores cupiditate placeat laudantium similique error delectus non asperiores qui cumque quae, alias quisquam?</h5>
-        </div>
-        <div class="col">
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel laborum optio iste soluta beatae ratione quos dolores cupiditate placeat laudantium similique error delectus non asperiores qui cumque quae, alias quisquam?</h5>
-        </div>
-        <div class="col">
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel laborum optio iste soluta beatae ratione quos dolores cupiditate placeat laudantium similique error delectus non asperiores qui cumque quae, alias quisquam?</h5>
-        </div>
-        <div class="col">
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel laborum optio iste soluta beatae ratione quos dolores cupiditate placeat laudantium similique error delectus non asperiores qui cumque quae, alias quisquam?</h5>
-        </div>
-        <div class="col">
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel laborum optio iste soluta beatae ratione quos dolores cupiditate placeat laudantium similique error delectus non asperiores qui cumque quae, alias quisquam?</h5>
-        </div>
-        <div class="col">
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel laborum optio iste soluta beatae ratione quos dolores cupiditate placeat laudantium similique error delectus non asperiores qui cumque quae, alias quisquam?</h5>
-        </div>
-        <div class="col">
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel laborum optio iste soluta beatae ratione quos dolores cupiditate placeat laudantium similique error delectus non asperiores qui cumque quae, alias quisquam?</h5>
-        </div>
-                <div class="col">
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel laborum optio iste soluta beatae ratione quos dolores cupiditate placeat laudantium similique error delectus non asperiores qui cumque quae, alias quisquam?</h5>
-        </div>
-        <div class="col">
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel laborum optio iste soluta beatae ratione quos dolores cupiditate placeat laudantium similique error delectus non asperiores qui cumque quae, alias quisquam?</h5>
-        </div>
-                <div class="col">
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel laborum optio iste soluta beatae ratione quos dolores cupiditate placeat laudantium similique error delectus non asperiores qui cumque quae, alias quisquam?</h5>
-        </div>
-        <div class="col">
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel laborum optio iste soluta beatae ratione quos dolores cupiditate placeat laudantium similique error delectus non asperiores qui cumque quae, alias quisquam?</h5>
-        </div>
-        <div class="col">
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel laborum optio iste soluta beatae ratione quos dolores cupiditate placeat laudantium similique error delectus non asperiores qui cumque quae, alias quisquam?</h5>
-        </div>
-        <div class="col">
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel laborum optio iste soluta beatae ratione quos dolores cupiditate placeat laudantium similique error delectus non asperiores qui cumque quae, alias quisquam?</h5>
-        </div>
-                <div class="col">
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel laborum optio iste soluta beatae ratione quos dolores cupiditate placeat laudantium similique error delectus non asperiores qui cumque quae, alias quisquam?</h5>
-        </div>
-        <div class="col">
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel laborum optio iste soluta beatae ratione quos dolores cupiditate placeat laudantium similique error delectus non asperiores qui cumque quae, alias quisquam?</h5>
-        </div>
-        <div class="col">
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel laborum optio iste soluta beatae ratione quos dolores cupiditate placeat laudantium similique error delectus non asperiores qui cumque quae, alias quisquam?</h5>
-        </div>
-        <div class="col">
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel laborum optio iste soluta beatae ratione quos dolores cupiditate placeat laudantium similique error delectus non asperiores qui cumque quae, alias quisquam?</h5>
-        </div>
-                <div class="col">
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel laborum optio iste soluta beatae ratione quos dolores cupiditate placeat laudantium similique error delectus non asperiores qui cumque quae, alias quisquam?</h5>
-        </div>
-        <div class="col">
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel laborum optio iste soluta beatae ratione quos dolores cupiditate placeat laudantium similique error delectus non asperiores qui cumque quae, alias quisquam?</h5>
-        </div>
-        <div class="col">
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel laborum optio iste soluta beatae ratione quos dolores cupiditate placeat laudantium similique error delectus non asperiores qui cumque quae, alias quisquam?</h5>
-        </div>
-        <div class="col">
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel laborum optio iste soluta beatae ratione quos dolores cupiditate placeat laudantium similique error delectus non asperiores qui cumque quae, alias quisquam?</h5>
-        </div>
-        <div class="col">
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel laborum optio iste soluta beatae ratione quos dolores cupiditate placeat laudantium similique error delectus non asperiores qui cumque quae, alias quisquam?</h5>
-        </div>
-        <div class="col">
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel laborum optio iste soluta beatae ratione quos dolores cupiditate placeat laudantium similique error delectus non asperiores qui cumque quae, alias quisquam?</h5>
-        </div>
-        <div class="col">
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel laborum optio iste soluta beatae ratione quos dolores cupiditate placeat laudantium similique error delectus non asperiores qui cumque quae, alias quisquam?</h5>
-        </div>
-        <div class="col">
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel laborum optio iste soluta beatae ratione quos dolores cupiditate placeat laudantium similique error delectus non asperiores qui cumque quae, alias quisquam?</h5>
-        </div>
-        <div class="col">
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel laborum optio iste soluta beatae ratione quos dolores cupiditate placeat laudantium similique error delectus non asperiores qui cumque quae, alias quisquam?</h5>
-        </div>
-        <div class="col">
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel laborum optio iste soluta beatae ratione quos dolores cupiditate placeat laudantium similique error delectus non asperiores qui cumque quae, alias quisquam?</h5>
-        </div>
-        <div class="col">
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel laborum optio iste soluta beatae ratione quos dolores cupiditate placeat laudantium similique error delectus non asperiores qui cumque quae, alias quisquam?</h5>
-        </div>
-        <div class="col">
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel laborum optio iste soluta beatae ratione quos dolores cupiditate placeat laudantium similique error delectus non asperiores qui cumque quae, alias quisquam?</h5>
-        </div>
-        <div class="col">
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel laborum optio iste soluta beatae ratione quos dolores cupiditate placeat laudantium similique error delectus non asperiores qui cumque quae, alias quisquam?</h5>
-        </div>
-        <div class="col">
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel laborum optio iste soluta beatae ratione quos dolores cupiditate placeat laudantium similique error delectus non asperiores qui cumque quae, alias quisquam?</h5>
-        </div>
-                <div class="col">
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel laborum optio iste soluta beatae ratione quos dolores cupiditate placeat laudantium similique error delectus non asperiores qui cumque quae, alias quisquam?</h5>
-        </div>
-                <div class="col">
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel laborum optio iste soluta beatae ratione quos dolores cupiditate placeat laudantium similique error delectus non asperiores qui cumque quae, alias quisquam?</h5>
-        </div>
-                <div class="col">
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel laborum optio iste soluta beatae ratione quos dolores cupiditate placeat laudantium similique error delectus non asperiores qui cumque quae, alias quisquam?</h5>
-        </div>
-                <div class="col">
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel laborum optio iste soluta beatae ratione quos dolores cupiditate placeat laudantium similique error delectus non asperiores qui cumque quae, alias quisquam?</h5>
-        </div>
-                <div class="col">
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel laborum optio iste soluta beatae ratione quos dolores cupiditate placeat laudantium similique error delectus non asperiores qui cumque quae, alias quisquam?</h5>
-        </div>
-                <div class="col">
-            <h5>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel laborum optio iste soluta beatae ratione quos dolores cupiditate placeat laudantium similique error delectus non asperiores qui cumque quae, alias quisquam?</h5>
-        </div>
-        
-        
     </div>
 
 
