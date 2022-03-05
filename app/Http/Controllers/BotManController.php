@@ -13,7 +13,8 @@ class BotManController extends Controller
     public function handle()
     {
         $botman = app('botman');
-   
+        $botman->reply("Hola, ¿En qué te puedo ayudar?");
+
         $botman->hears('{message}', function($botman, $message) {
    
             if ($message == 'Denunciar') {
@@ -21,7 +22,7 @@ class BotManController extends Controller
             }
             
             else{
-                $botman->reply("write 'hi' for testing...");
+                $botman->reply("Hola, ¿En qué te puedo ayudar?");
             }
    
         });

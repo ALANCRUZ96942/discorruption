@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('inicio');;
 
 Route::match(['get', 'post'], '/botman', [BotManController::class, 'handle']);
 
@@ -41,3 +41,12 @@ Route::get('/creditos', function () {
 Route::get('/estadisticas', function () {
     return view('welcome');
 })->name('estadisticas');;
+
+Route::get('/ver', function () {
+    return view('ver');
+})->name('ver');
+
+Route::get('/fin', function () {
+    return view('fin');
+})->name('fin');
+

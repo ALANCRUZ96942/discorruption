@@ -9,8 +9,5 @@ class Estado extends Model
 {
     use HasFactory;
 
-    public function denuncias()
-    {
-      return $this->belongsTo(Denuncia::class);
-    }
+
 }

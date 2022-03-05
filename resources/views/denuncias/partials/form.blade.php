@@ -94,16 +94,15 @@
             </div>
     
             <div class="m-3">
-             {!! Form::label('estado_id', '¿Dónde ocurrió?') !!}
+
+                <div class="form-group {{ $errors->has('estado') ? 'error' : ''}}">
+                    {!! Form::label('estado', '¿Dónde ocurrió?') !!}
     
-             <select name="estado_id" class="form-control" >
-                <option value=""> -- Seleccione estado --</option>
-                @foreach($estados as $estado)
-                    <option value="{{ $estado->id }}">
-                        {{ $estado->name }}
-                    </option>
-                @endforeach
-            </select>
+                    {!! Form::select('estado_id', isset($estados) ? $estados : array(' ' => ' '), null,['class' =>
+                    'form-control form-control-lg'])!!}
+                </div>
+                 
+
             </div>
 
 

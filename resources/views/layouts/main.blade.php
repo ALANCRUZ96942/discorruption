@@ -21,7 +21,10 @@
         <div class="col-12 pt-4 pb-4 mb-0">
             <div class="row m-0 p-0">
                 <div class="col-md-2 col-12" style="text-align: center">
-                    <img src="../assets/img/logo.png" class="img-fluid" alt="logo">
+                    <a href="{{ route('inicio') }}" class=" text-muted">           
+                        <img src="../assets/img/logo.png" class="img-fluid" alt="logo">
+                    </a>
+         
                 </div>
                 <div class="col-md-6 col-12 mt-3">
                     <div class="row">
