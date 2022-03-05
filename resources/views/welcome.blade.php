@@ -23,8 +23,13 @@
 <body>
     <script>
 	    var botmanWidget = {
-	        aboutText: 'Ingresa acciones',
-	        introMessage: "✋ Hola, ¿Qué quieres hacer hacer?"
+           
+    title:'Somos Incorruptibles',
+    introMessage: "✋ Hola, ¿Qué quieres hacer hacer?"
+    mainColor:'#c02026',
+    aboutText:'',
+    bubbleBackground:'#c02026',
+    headerTextColor: '#fff',
 	    };
     </script>
   
@@ -80,14 +85,14 @@
         <img class="img-fluid w-100"src="../assets/img/fondo.png" alt="">
         <div class="col-md-4 col-12 mb-3 mt-3 p-md-0 p-3 botones">
             <div class="row m-0 mb-0 p-0">
-                <button type="button" class="btn btn-light border-dark">
-                    <h1 class="p-lg-5 p-md-0 p-5">Comienza tu denuncia aquí</h1>
-                </button>
+               <button type="button" class="shadow btn btn-light" style="border-top-left-radius: 15px;border-bottom-left-radius: 15px">
+                <a href="{{route('denuncias.index')}}" style="text-decoration: none"><h1 class="p-lg-5 p-md-0 p-5 negrita-h1">Comienza tu denuncia aquí</h1>
+                </a></button>
             </div>
             <div class="row m-0 mt-5 p-0">
-                <button type="button" class="btn btn-light border-dark">                   
-                     <h1 class="p-lg-5 p-md-0 p-5">Conoce el estatus de tu denuncia aquí</h1>
-                </button>
+                <button type="button" class="shadow btn btn-light" style="border-top-left-radius: 15px;border-bottom-left-radius: 15px">                   
+                    <a href="{{route('denuncias.index')}}" style="text-decoration: none"> <h1 class="p-lg-5 p-md-0 p-5 negrita-h1">Conoce el estatus de tu denuncia aquí</h1>
+                    </a></button>
             </div>
         </div>
     </div>
