@@ -3,6 +3,7 @@
 use App\Http\Controllers\BotManController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\DenunciaController;
+use App\Models\Denuncia;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,7 +24,8 @@ Route::get('/', function () {
 Route::match(['get', 'post'], '/botman', [BotManController::class, 'handle']);
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
+    $denuncias =Denuncia::all();
+    return view('dashboard', compact('denuncias'));
 })->name('dashboard');
 
 

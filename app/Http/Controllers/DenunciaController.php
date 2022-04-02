@@ -11,32 +11,36 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use PhpParser\Builder\Function_;
 
+
 class DenunciaController extends Controller
 {
     public function create(){
 
-        $actos = Acto::all();
-        $sexos = Sexo::all();
-        $escolaridades = Escolaridad::all();
+        $actos = Acto::pluck('name', 'id');
+        $sexos = Sexo::pluck('name', 'id');
+        $escolaridades =  Escolaridad::pluck('name', 'id');
         $estados = Estado::pluck('name', 'id');
         return view('denuncias.index', compact('actos','sexos','estados','escolaridades'));
     }
 
     public function store(Request $request){
 
-
-        $datos = $request->validate([
-            'name' => 'required',
+         $this->validate($request,[
+            'description' => 'required',
             'date' => 'required',
-            'age' => 'required',
+          //  'imagen' =>'file|size:10240'
         ]);
-    
+
+            $datos = $request->all();
+
             $denuncia =  Denuncia::create($datos);
+            
+        if ($request->file('imagen') != null) {
             $path = Storage::put('evidencias',$request->file('imagen'));
             $denuncia->imagen()->create([
                 'url'=> $path
             ]);
-           
+        }
             
                                     // Available alpha caracters
                 $characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -54,6 +58,13 @@ class DenunciaController extends Controller
         ->with('success', 'Denuncia realizada correctamente, con el número de folio: '.$string);
 
     
+    }
+
+
+    public function show(Request $request){
+
+
+        
     }
     public function index(){
         $denuncias = Denuncia::all();

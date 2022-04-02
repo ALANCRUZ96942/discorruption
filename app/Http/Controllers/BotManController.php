@@ -13,12 +13,15 @@ class BotManController extends Controller
     public function handle()
     {
         $botman = app('botman');
-        $botman->reply("Hola, ¿En qué te puedo ayudar?");
 
         $botman->hears('{message}', function($botman, $message) {
    
             if ($message == 'Denunciar') {
                 $this->askName($botman);
+            }
+
+            if ($message == 'Ver') {
+                $botman->reply("Dirígete a conocer el estatus de tu denuncia");
             }
             
             else{
@@ -35,7 +38,7 @@ class BotManController extends Controller
      */
     public function askName($botman)
     {
-        $botman->ask('Hola, qué tipo de denuncia', function(Answer $answer) {
+        $botman->ask('Dirigete a comenzar denuncia', function(Answer $answer) {
    
             $name = $answer->getText();
    

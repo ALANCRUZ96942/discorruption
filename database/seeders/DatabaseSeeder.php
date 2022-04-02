@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
     {
         Storage::deleteDirectory('evidencias');
         Storage::makeDirectory('evidencias');
+        $this->call(StatusSeeder::class);
         $this->call(ActosSeeder::class);
         $this->call(SexSeeder::class);
         $this->call(EscolaridadSeeder::class);

@@ -32,7 +32,7 @@
                             <a href="{{ route('login') }}" class=" text-muted">Créditos</a>
                         </div>
                         <div class="col" style="text-align: center">
-                            <a href="{{ route('denuncias.index') }}" class=" text-muted">Esadísticas</a>
+                            <a href="{{ route('denuncias.index') }}" class=" text-muted">Estadísticas</a>
                         </div>
                         <div class="col" style="text-align: center">
                             <a href="{{ route('login') }}" class="  text-muted">¿Quiénes somos?</a>

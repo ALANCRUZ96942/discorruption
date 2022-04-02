@@ -1,6 +1,14 @@
 @extends('layouts.main')
 @section('content')
 
+<div class="container p-5">
+<div class="card shadow p-5">
+	<h1>
+		En el siguiente apartado se puede observar los resultados que recibimos en tiempo real
+	</h1>
+</div>
+</div>
+
 
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">

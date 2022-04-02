@@ -19,6 +19,15 @@ class Denuncia extends Model
     {
       return $this->belongsTo(Estado::class);
     }
+    public function acto()
+    {
+      return $this->belongsTo(Acto::class);
+    }
 
-    
+    public function sexo()
+    {
+      return $this->belongsTo(Sexo::class);
+    }
+
+
 }

@@ -20,13 +20,11 @@ class CreateDenunciasTable extends Migration
 
 
             $table->string('name-d')->nullable();
-            $table->text('occupation-d')->nullable();
-            $table->string('e-mail')->nullable();
 
     
 
             $table->string('name')->nullable();
-            $table->integer('age');
+            $table->integer('age')->nullable();
             $table->text('occupation')->nullable();
 
             $table->unsignedBigInteger('sexo_id')->nullable();
@@ -42,8 +40,8 @@ class CreateDenunciasTable extends Migration
             $table->unsignedBigInteger('escolaridad_id')->nullable();
             $table->foreign('escolaridad_id')->references('id')->on('escolaridads');
 
-
-            $table->text('suceso')->nullable();
+            $table->unsignedBigInteger('status_id')->default('1');
+            $table->foreign('status_id')->references('id')->on('statuses');
 
             $table->timestamps();
         });
